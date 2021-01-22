@@ -12,7 +12,7 @@ Import('rtconfig')
 # Package configuration
 #---------------------------------------------------------------------------------
 PKGNAME = "SDL2"
-# DEPENDS = ["PKG_USING_SDL2"] 
+# DEPENDS = ["PKG_USING_SDL2", "RT_USING_TOUCH", "RT_USING_SIGNALS"] 
 DEPENDS = [] 
 VERSION = "2.0.14"
 
@@ -23,7 +23,7 @@ SOURCES          = Glob("SDL-release-2.0.14/src/*.c") + \
                    Glob("SDL-release-2.0.14/src/atomic/*.c") + \
                    Glob("SDL-release-2.0.14/src/audio/*.c") + \
                    Glob("SDL-release-2.0.14/src/audio/dummy/*.c") + \
-                   Glob("SDL-release-2.0.14/src/core/rtt/*.c") + \
+                   Glob("SDL-release-2.0.14/src/core/rtthread/*.c") + \
                    Glob("SDL-release-2.0.14/src/cpuinfo/*.c") + \
                    Glob("SDL-release-2.0.14/src/dynapi/*.c") + \
                    Glob("SDL-release-2.0.14/src/events/*.c") + \
@@ -39,18 +39,20 @@ SOURCES          = Glob("SDL-release-2.0.14/src/*.c") + \
                    Glob("SDL-release-2.0.14/src/misc/*.c") + \
                    Glob("SDL-release-2.0.14/src/misc/dummy/*.c") + \
                    Glob("SDL-release-2.0.14/src/power/*.c") + \
-                   Glob("SDL-release-2.0.14/src/power/rtt/*.c") + \
+                   Glob("SDL-release-2.0.14/src/power/rtthread/*.c") + \
                    Glob("SDL-release-2.0.14/src/render/*.c") + \
                    Glob("SDL-release-2.0.14/src/render/software/*.c") + \
                    Glob("SDL-release-2.0.14/src/sensor/*.c") + \
                    Glob("SDL-release-2.0.14/src/sensor/dummy/*.c") + \
                    Glob("SDL-release-2.0.14/src/stdlib/*.c") + \
                    Glob("SDL-release-2.0.14/src/thread/*.c") + \
-                   Glob("SDL-release-2.0.14/src/thread/dummy/*.c") + \
+                   Glob("SDL-release-2.0.14/src/thread/generic/*.c") + \
                    Glob("SDL-release-2.0.14/src/timer/*.c") + \
                    Glob("SDL-release-2.0.14/src/timer/dummy/*.c") + \
                    Glob("SDL-release-2.0.14/src/video/*.c") + \
-                   Glob("SDL-release-2.0.14/src/video/dummy/*.c") 
+                   Glob("SDL-release-2.0.14/src/video/yuv2rgb/*.c") + \
+                   Glob("SDL-release-2.0.14/src/video/dummy/*.c") + \
+                   Glob("SDL-release-2.0.14/src/video/rtthread/*.c")
 
 LOCAL_CPPPATH    = [] 
 LOCAL_CCFLAGS    = "" 
