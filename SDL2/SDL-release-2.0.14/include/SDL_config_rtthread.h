@@ -30,12 +30,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-// typedef signed long off_t;
-
-// #ifdef __GNUC__
-// #define HAVE_GCC_SYNC_LOCK_TEST_AND_SET 1
-// #endif
-
 /* C library functions */
 #undef HAVE_SIGACTION 
 #define HAVE_SIGNAL_H    1
@@ -127,7 +121,6 @@
 #define SDL_LOADSO_DISABLED        1
 #define SDL_THREADS_DISABLED       1
 #define SDL_TIMERS_DISABLED        1
-#define SDL_VIDEO_DRIVER_DUMMY     1
 #define SDL_VIDEO_DRIVER_RTTHREAD  1
 #define SDL_FILESYSTEM_DUMMY       1
 
