@@ -51,7 +51,6 @@ SOURCES          = Glob("SDL-release-2.0.14/src/*.c") + \
                    Glob("SDL-release-2.0.14/src/timer/dummy/*.c") + \
                    Glob("SDL-release-2.0.14/src/video/*.c") + \
                    Glob("SDL-release-2.0.14/src/video/yuv2rgb/*.c") + \
-                   Glob("SDL-release-2.0.14/src/video/dummy/*.c") + \
                    Glob("SDL-release-2.0.14/src/video/rtthread/*.c")
 
 LOCAL_CPPPATH    = [] 
