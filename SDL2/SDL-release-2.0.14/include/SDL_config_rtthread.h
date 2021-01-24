@@ -120,7 +120,7 @@
 #define SDL_SENSOR_DISABLED        1
 #define SDL_LOADSO_DISABLED        1
 #define SDL_THREADS_DISABLED       1
-#define SDL_TIMERS_DISABLED        1
+#define SDL_TIMERS_RTTHREAD        1
 #define SDL_VIDEO_DRIVER_RTTHREAD  1
 #define SDL_FILESYSTEM_DUMMY       1
 
