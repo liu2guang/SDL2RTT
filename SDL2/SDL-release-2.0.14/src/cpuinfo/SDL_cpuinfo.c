@@ -24,6 +24,8 @@
 #include "../SDL_internal.h"
 #endif
 
+#define TEST_MAIN
+
 #if defined(__WIN32__) || defined(__WINRT__)
 #include "../core/windows/SDL_windows.h"
 #endif
@@ -937,6 +939,13 @@ SDL_GetSystemRAM(void)
             }
         }
 #endif
+#ifdef __RTTHREAD__
+        if (SDL_SystemRAM <= 0) {
+            rt_uint32_t total, used, max_used; 
+            rt_memory_info(&total, &used, &max_used); 
+            SDL_SystemRAM = (int)(total/(1024*1024)); 
+        }
+#endif
 #endif
     }
     return SDL_SystemRAM;
@@ -1038,7 +1047,7 @@ SDL_SIMDFree(void *ptr)
 #include <stdio.h>
 
 int
-main()
+cpu_info_main()
 {
     printf("CPU count: %d\n", SDL_GetCPUCount());
     printf("CPU type: %s\n", SDL_GetCPUType());
@@ -1061,6 +1070,8 @@ main()
     printf("RAM: %d MB\n", SDL_GetSystemRAM());
     return 0;
 }
+#include <rtthread.h>
+MSH_CMD_EXPORT_ALIAS(cpu_info_main, SDL_cpuinfo, cpuinfo.); 
 
 #endif /* TEST_MAIN */
 

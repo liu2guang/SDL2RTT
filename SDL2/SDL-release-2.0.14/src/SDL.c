@@ -527,6 +527,8 @@ SDL_GetPlatform()
     return "iOS";
 #elif __PSP__
     return "PlayStation Portable";
+#elif __RTTHREAD__
+    return "RT-Thread";
 #else
     return "Unknown (see SDL_platform.h)";
 #endif
