@@ -114,7 +114,7 @@
 #define HAVE_NANOSLEEP   1
 
 /* SDL2 Func Config */ 
-#define SDL_AUDIO_DRIVER_DUMMY     1
+#define SDL_AUDIO_DRIVER_RTTHREAD  1
 #define SDL_JOYSTICK_DISABLED      1
 #define SDL_HAPTIC_DISABLED        1
 #define SDL_SENSOR_DISABLED        1

@@ -22,7 +22,7 @@ VERSION = "2.0.14"
 SOURCES          = Glob("SDL-release-2.0.14/src/*.c") + \
                    Glob("SDL-release-2.0.14/src/atomic/*.c") + \
                    Glob("SDL-release-2.0.14/src/audio/*.c") + \
-                   Glob("SDL-release-2.0.14/src/audio/dummy/*.c") + \
+                   Glob("SDL-release-2.0.14/src/audio/rtthread/*.c") + \
                    Glob("SDL-release-2.0.14/src/core/rtthread/*.c") + \
                    Glob("SDL-release-2.0.14/src/cpuinfo/*.c") + \
                    Glob("SDL-release-2.0.14/src/dynapi/*.c") + \
