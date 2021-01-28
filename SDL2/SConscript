@@ -45,6 +45,7 @@ SOURCES          = Glob("SDL-release-2.0.14/src/*.c") + \
                    Glob("SDL-release-2.0.14/src/sensor/*.c") + \
                    Glob("SDL-release-2.0.14/src/sensor/dummy/*.c") + \
                    Glob("SDL-release-2.0.14/src/stdlib/*.c") + \
+                   Glob("SDL-release-2.0.14/src/test/*.c") + \
                    Glob("SDL-release-2.0.14/src/thread/*.c") + \
                    Glob("SDL-release-2.0.14/src/thread/rtthread/*.c") + \
                    Glob("SDL-release-2.0.14/src/timer/*.c") + \
