@@ -19,7 +19,7 @@ int main_testsprites(int argc, char *argv[])
     renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_SOFTWARE);
 
     // bitmapSurface = IMG_Load("/sd/Gun2.png");
-    bitmapSurface = IMG_Load(argv[1]);
+    bitmapSurface = IMG_Load(argc != 2 ? "/sd/Gun2.png": argv[1]);
     bitmapTex = SDL_CreateTextureFromSurface(renderer, bitmapSurface);
     SDL_FreeSurface(bitmapSurface);
 
@@ -47,7 +47,6 @@ int main_testsprites(int argc, char *argv[])
         m_sourceRectangle.y = index_y * 192; 
 
         SDL_RenderClear(renderer);
-        // SDL_RenderCopy(renderer, bitmapTex, NULL, NULL);
         SDL_RenderCopyEx(renderer, bitmapTex, &m_sourceRectangle, &m_destinationRectangle, 0.0, NULL, SDL_FLIP_HORIZONTAL); 
         SDL_RenderPresent(renderer);
 
@@ -55,8 +54,6 @@ int main_testsprites(int argc, char *argv[])
         {
             break; 
         }
-
-        SDL_Delay(10); 
     }
 
     SDL_DestroyTexture(bitmapTex);
