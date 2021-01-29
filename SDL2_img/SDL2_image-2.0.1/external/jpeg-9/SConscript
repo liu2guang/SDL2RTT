@@ -11,24 +11,37 @@ Import('rtconfig')
 #---------------------------------------------------------------------------------
 # Package configuration
 #---------------------------------------------------------------------------------
-PKGNAME = "sdl2_image"
-DEPENDS = ["SDL2_USING_IMAGE"]
+PKGNAME = "libjpeg"
+DEPENDS = []
+# DEPENDS = ["PKG_USING_LIBJPEG", "PKG_USING_ZLIB"]
 
 #---------------------------------------------------------------------------------
 # Compile the configuration 
 #---------------------------------------------------------------------------------
-SOURCES          = Glob("SDL2_image-2.0.1/*.c") 
+SOURCES          = Glob("*.c") 
+SrcRemove(SOURCES, "jmem-android.c")
+SrcRemove(SOURCES, "jmemdos.c")
+SrcRemove(SOURCES, "jmemmac.c")
+SrcRemove(SOURCES, "jmemname.c")
+SrcRemove(SOURCES, "jmemnobs.c")
+SrcRemove(SOURCES, "djpeg.c")
+SrcRemove(SOURCES, "example.c")
+SrcRemove(SOURCES, "cjpeg.c")
+SrcRemove(SOURCES, "ckconfig.c")
+SrcRemove(SOURCES, "rdjpgcom.c")
+SrcRemove(SOURCES, "wrjpgcom.c")
+SrcRemove(SOURCES, "jpegtran.c")
 
 LOCAL_CPPPATH    = [] 
 LOCAL_CCFLAGS    = "" 
 LOCAL_ASFLAGS    = ""
 
-CPPPATH          = [os.path.join(GetCurrentDir(), './SDL2_image-2.0.1')] 
+CPPPATH          = [os.path.join(GetCurrentDir(), '.')] 
 
 CCFLAGS          = "" 
 ASFLAGS          = ""
 
-CPPDEFINES       = ["LOAD_BMP", "LOAD_PNG", "LOAD_JPG"] 
+CPPDEFINES       = []
 LOCAL_CPPDEFINES = []
 
 LIBS             = [] 
