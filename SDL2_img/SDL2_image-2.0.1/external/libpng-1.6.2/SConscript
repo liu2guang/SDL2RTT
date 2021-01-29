@@ -20,6 +20,7 @@ DEPENDS = []
 #---------------------------------------------------------------------------------
 SOURCES          = Glob("*.c") 
 SrcRemove(SOURCES, "pngtest.c")
+SrcRemove(SOURCES, "example.c")
 
 LOCAL_CPPPATH    = [] 
 LOCAL_CCFLAGS    = "" 
