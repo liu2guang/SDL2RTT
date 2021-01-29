@@ -28,7 +28,7 @@ CPPPATH          = [os.path.join(GetCurrentDir(), './SDL2_image-2.0.1')]
 CCFLAGS          = "" 
 ASFLAGS          = ""
 
-CPPDEFINES       = ["LOAD_BMP", "LOAD_PNG", "LOAD_JPG"] 
+CPPDEFINES       = ["LOAD_BMP", "LOAD_PNG", "LOAD_JPG", "LOAD_GIF"] 
 LOCAL_CPPDEFINES = []
 
 LIBS             = [] 

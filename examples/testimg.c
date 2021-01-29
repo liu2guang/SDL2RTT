@@ -38,7 +38,8 @@ int main_testimg(int argc, char *argv[])
 
     // 渲染图像
     // SDL_Surface *bmp = SDL_LoadBMP("/1.bmp");
-    SDL_Surface *bmp = IMG_Load("/sd/222.png");
+    // SDL_Surface *bmp = IMG_Load("/sd/222.png");
+    SDL_Surface *bmp = IMG_Load(argv[1]?argv[1]:"/sd/222.png");
     SDL_Texture *tex = SDL_CreateTextureFromSurface(pRenderer, bmp);
     SDL_RenderCopy(pRenderer, tex, NULL, NULL);
     SDL_FreeSurface(bmp);
