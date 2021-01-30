@@ -1,6 +1,6 @@
 #include "rtthread.h"
 #include "SDL.h"
-#include "SDL_ttf.h"
+#include "SDL_image.h"
 
 int main_testimg(int argc, char *argv[])
 {
@@ -31,7 +31,7 @@ int main_testimg(int argc, char *argv[])
     SDL_Event evt;
 
     // 清除背景
-    SDL_SetRenderDrawColor(pRenderer, 0xFF, 0x00, 0x00, 255);
+    SDL_SetRenderDrawColor(pRenderer, 0xFF, 0x00, 0x00, 0xFF);
     SDL_RenderClear(pRenderer);
 
     SDL_Delay(1000);
